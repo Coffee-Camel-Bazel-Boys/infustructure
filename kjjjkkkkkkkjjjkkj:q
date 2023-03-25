@@ -13,7 +13,7 @@ http {
         root /usr/share/nginx/html;
         listen 80;
         location / {
-            add_header 'Referrer-Policy' 'strict-origin-when-cross-origin';
+            add_header 'Referrer-Policy' 'origin';
             index index.html index.htm;
             try_files $uri $uri/ /index.html;
         }
