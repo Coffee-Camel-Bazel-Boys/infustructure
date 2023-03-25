@@ -10,5 +10,12 @@ services:
       POSTGRES_USER: coolKid123
       POSTGRES_PASSWORD: ${password}
 
+  webserver:
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+
 volumes:
   pgdata:
