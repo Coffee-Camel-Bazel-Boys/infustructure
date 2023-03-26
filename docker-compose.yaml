@@ -12,6 +12,8 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
       - /etc/certs/postgres/server.crt:/var/lib/postgresql/server.crt:ro
       - /etc/certs/postgres/server.key:/var/lib/postgresql/server.key:ro
+    env_file:
+      - .env
     networks:
       - garden-land
     expose:
@@ -32,6 +34,8 @@ services:
       - garden-land
     depends_on:
       - db
+    env_file:
+      - .env
 
 networks:
   garden-land:
