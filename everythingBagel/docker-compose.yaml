@@ -53,17 +53,6 @@ services:
       - garden-land
     env_file: .env
 
-  geo:
-    build: bff/.
-    expose: 
-      - 3000
-    ports:
-      - '3000:3000'
-    networks:
-      - garden-land
-    env_file: .env
-
-
 networks:
   garden-land:
     name: garden-land
